@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finals Lab Task 2 - EDM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finals Lab Task 2 - Database Management Portfolio</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(120deg, #000 30%, #020f1f 70%);
-      color: #00bfff;
+      background: linear-gradient(120deg, #000 30%, #0b1b2c 70%);
+      color: #00ffea;
       overflow-x: hidden;
       animation: bgShift 15s ease-in-out infinite alternate;
     }
@@ -26,58 +26,43 @@
       padding: 20px;
       text-align: center;
       font-size: 2rem;
-      color: #00bfff;
-      text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+      color: #00ffea;
+      text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
       animation: neonGlow 2s infinite alternate;
-      box-shadow: 0 0 15px #00bfff;
+      box-shadow: 0 0 15px #00ffea;
+      font-family: 'Orbitron', sans-serif;
     }
 
     section {
       padding: 30px 20px;
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
       border-radius: 10px;
       background: rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease-in-out;
       animation: fadeInUp 1.5s ease-in-out;
     }
 
     section:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px #00bfff;
+      transform: scale(1.03);
+      box-shadow: 0 0 20px #00ffea;
     }
 
-    h2, h3, h4 {
-      color: #00bfff;
-      text-shadow: 0 0 5px #00bfff;
-      border-bottom: 2px solid #00bfff;
+    h2 {
+      color: #00ffea;
+      border-bottom: 2px solid #00ffea;
       padding-bottom: 5px;
       animation: glowPulse 2s infinite alternate;
-    }
-
-    ul, li, p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      border: 2px solid #00bfff;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 10px #00bfff;
-      animation: floatImage 4s ease-in-out infinite;
+      font-family: 'Orbitron', sans-serif;
     }
 
     @keyframes glowPulse {
-      0% { text-shadow: 0 0 5px #00bfff; }
-      100% { text-shadow: 0 0 15px #00bfff; }
+      0% { text-shadow: 0 0 5px #00ffea, 0 0 10px #00ffea; }
+      100% { text-shadow: 0 0 20px #00ffea, 0 0 30px #00ffea; }
     }
 
-    @keyframes floatImage {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0); }
+    @keyframes neonGlow {
+      from { box-shadow: 0 0 10px #00ffea; }
+      to { box-shadow: 0 0 25px #00ffea, 0 0 50px #00ffea; }
     }
 
     @keyframes fadeInUp {
@@ -85,70 +70,67 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes neonGlow {
-      from { box-shadow: 0 0 10px #00bfff; }
-      to { box-shadow: 0 0 25px #00bfff, 0 0 50px #00bfff; }
+    .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #00ffea;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ffea;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-link:hover {
+      background-color: #00ccbb;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffea;
+    }
+
+    .screenshot img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffea;
+      animation: floatImage 4s ease-in-out infinite;
+    }
+
+    @keyframes floatImage {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>Finals Lab Task 2 - EDM</header>
+  <header>Finals Lab Task 2 - Database Management Portfolio</header>
 
   <section>
-    <p>This portfolio demonstrates my understanding of MySQL database creation using a simplified student assignment submission system. It covers the step-by-step creation of tables representing students, assignments, and their submissions. This exercise applies data types, relationships, and constraints like primary keys, foreign keys, and composite keys to build a fully functional relational schema.</p>
+    <p>This portfolio presents advanced skills in database management, with focus on normalization, advanced SQL queries, and transaction control. Screenshots and structured outputs show my mastery of core relational database operations.</p>
+
+    <p>Download the Word file: 
+      <a class="download-link" href="https://github.com/user-attachments/files/19617570/Soguilon.Carl.Asnef.B.FINALS.EDM.DATABASE.DOCX.docx" download>Download Word File</a>
+    </p>
   </section>
 
   <section>
-    <h2>Step By Step Process</h2>
-    <h3>1. Create the Student Table</h3>
+    <h2>Highlights</h2>
     <ul>
-      <li>Define <strong>username</strong> as a VARCHAR(50).</li>
-      <li>Set <strong>username</strong> as the Primary Key.</li>
+      <li>3NF Normalized table structures</li>
+      <li>SQL scripts for transactions and subqueries</li>
+      <li>Real-world application of foreign keys and indexes</li>
+      <li>Screenshots of working SQL results</li>
+      <li>Documentation of error handling & fixes</li>
     </ul>
 
-    <h3>2. Create the Assignment Table</h3>
-    <ul>
-      <li>Define <strong>shortname</strong> as a VARCHAR(50) and set as the Primary Key.</li>
-      <li>Define <strong>due_date</strong> as a DATE NOT NULL.</li>
-      <li>Define <strong>url</strong> as a VARCHAR(255), can be NULL.</li>
-    </ul>
-
-    <h3>3. Create the Submission Table</h3>
-    <ul>
-      <li>Define <strong>username</strong> and <strong>shortname</strong> both as VARCHAR(50).</li>
-      <li>Define <strong>version</strong> as an INT.</li>
-      <li>Define <strong>submit_date</strong> as DATE NOT NULL.</li>
-      <li>Define <strong>data</strong> as TEXT.</li>
-      <li>Set a composite primary key of (username, shortname, version).</li>
-      <li>Add foreign keys referencing the student and assignment tables.</li>
-    </ul>
-  </section>
-
-  <section>
     <h2>Screenshots</h2>
-    <h3>Query Statements</h3>
-    <p>1. Student Table</p>
-    <img src="https://github.com/user-attachments/assets/65bb70d5-9864-46ea-96af-8424b4e79a97">
-
-    <p>2. Assignment Table</p>
-    <img src="https://github.com/user-attachments/assets/b8dcd7f3-8443-4be2-9f87-f69e9ba68437">
-
-    <p>3. Submission Table</p>
-    <img src="https://github.com/user-attachments/assets/53043940-901d-4f7f-99d2-e6b2a0174ad8">
-
-    <h3>Table Structure</h3>
-    <p>1. Student Table</p>
-    <img src="https://github.com/user-attachments/assets/5d2c547a-591b-4aa3-8216-fd8534177855">
-
-    <p>2. Assignment Table</p>
-    <img src="https://github.com/user-attachments/assets/0e969cb9-382c-4f01-a491-1d9d2eaab07b">
-
-    <p>3. Submission Table</p>
-    <img src="https://github.com/user-attachments/assets/e53bf254-3af7-4405-ae97-d8b1a76fc2e3">
-
-    <h3>EER Diagram</h3>
-    <img src="https://github.com/user-attachments/assets/1d29925b-4f4f-4a7a-9937-afa7efa96811">
-    <img src="https://github.com/user-attachments/assets/7e6b2f31-14a3-4f67-900b-f17e6f85e954">
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/e223f380-9a38-4693-8073-c93919e3f2b3" alt="Screenshot 1">
+    </div>
+    <br />
+    <div class="screenshot">
+      <img src="https://github.com/user-attachments/assets/f5f40876-f305-495b-a844-f1b1bbd08d04" alt="Screenshot 2">
+    </div>
   </section>
 </body>
 </html>
