@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finals Lab Task 2 - MySQL Project</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(120deg, #000 30%, #020f1f 70%);
+      color: #00bfff;
+      overflow-x: hidden;
+      animation: bgShift 15s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: left top; }
+      100% { background-position: right bottom; }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
+      animation: neonGlow 2s infinite alternate;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: auto;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease-in-out;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px #00bfff;
+    }
+
+    h2 {
+      color: #00bfff;
+      text-shadow: 0 0 5px #00bfff;
+      border-bottom: 2px solid #00bfff;
+      padding-bottom: 5px;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #00bfff;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #00bfff;
+      animation: floatImage 6s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 5px #00bfff; }
+      100% { text-shadow: 0 0 20px #00bfff; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatImage {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>Finals Lab Task 2 - MySQL Project</header>
+
+  <section>
+    <p>This portfolio demonstrates my understanding of MySQL database creation using a simplified student assignment submission system. It covers the step-by-step creation of tables representing students, assignments, and their submissions. This exercise applies data types, relationships, and constraints like primary keys, foreign keys, and composite keys to build a fully functional relational schema.</p>
+  </section>
+
+  <section>
+    <h2>Step by Step Process</h2>
+    <h3>1. Create the student table:</h3>
+    <ul>
+      <li>Define username as a VARCHAR(50).</li>
+      <li>Set username as the Primary Key.</li>
+    </ul>
+
+    <h3>2. Create the assignment table:</h3>
+    <ul>
+      <li>Define shortname as a VARCHAR(50) and set it as the Primary Key.</li>
+      <li>Define due_date as a DATE NOT NULL.</li>
+      <li>Define url as a VARCHAR(255), which can be null.</li>
+    </ul>
+
+    <h3>3. Create the submission table:</h3>
+    <ul>
+      <li>Define username and shortname both as VARCHAR(50).</li>
+      <li>Define version as an INT.</li>
+      <li>Define submit_date as a DATE NOT NULL.</li>
+      <li>Define data as TEXT.</li>
+      <li>Set a composite primary key of (username, shortname, version).</li>
+      <li>Add foreign keys referencing the student and assignment tables.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <h3>Query Statements</h3>
+    <p>1. Student Table</p>
+    <img src="https://github.com/user-attachments/assets/65bb70d5-9864-46ea-96af-8424b4e79a97" alt="Student Table Query" />
+
+    <p>2. Assignment Table</p>
+    <img src="https://github.com/user-attachments/assets/b8dcd7f3-8443-4be2-9f87-f69e9ba68437" alt="Assignment Table Query" />
+
+    <p>3. Submission Table</p>
+    <img src="https://github.com/user-attachments/assets/53043940-901d-4f7f-99d2-e6b2a0174ad8" alt="Submission Table Query" />
+
+    <h3>Table Structure</h3>
+    <p>1. Student Table</p>
+    <img src="https://github.com/user-attachments/assets/5d2c547a-591b-4aa3-8216-fd8534177855" alt="Student Structure" />
+
+    <p>2. Assignment Table</p>
+    <img src="https://github.com/user-attachments/assets/0e969cb9-382c-4f01-a491-1d9d2eaab07b" alt="Assignment Structure" />
+
+    <p>3. Submission Table</p>
+    <img src="https://github.com/user-attachments/assets/e53bf254-3af7-4405-ae97-d8b1a76fc2e3" alt="Submission Structure" />
+
+    <h3>EER Diagram</h3>
+    <img src="https://github.com/user-attachments/assets/1d29925b-4f4f-4a7a-9937-afa7efa96811" alt="EER Diagram 1" />
+    <img src="https://github.com/user-attachments/assets/7e6b2f31-14a3-4f67-900b-f17e6f85e954" alt="EER Diagram 2" />
+  </section>
+</body>
+</html>
